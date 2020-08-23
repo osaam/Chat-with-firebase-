@@ -1,0 +1,88 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    compileSdkVersion 29
+
+    defaultConfig {
+        applicationId "com.osamaelsh3rawy.chat"
+        minSdkVersion 24
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        vectorDrawables.useSupportLibrary = true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'com.google.firebase:firebase-auth:16.0.5'
+    implementation 'com.google.firebase:firebase-database:16.0.4'
+    implementation 'com.google.firebase:firebase-core:16.0.4'
+    implementation 'com.google.firebase:firebase-storage:16.0.4'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    //text input layout
+    // implementation 'com.google.android.material:material:1.1.0'
+    // implementation 'com.google.android.material:material:1.0.0-beta01'
+    implementation 'com.google.android.material:material:1.1.0-alpha09'
+//retrofit
+    implementation "com.squareup.retrofit2:retrofit:2.6.2"
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+
+// ViewModel and LiveData
+    implementation "androidx.lifecycle:lifecycle-extensions:2.1.0"
+
+//recyclerview
+    implementation 'com.android.support:recyclerview-v7:29.0.0'
+
+//cardview
+    implementation 'com.android.support:cardview-v7:29.0.0'
+
+//rx java
+    implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'
+    implementation 'io.reactivex.rxjava3:rxjava:3.0.0'
+
+//adapter call  to rx java
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.9.0'
+    implementation 'com.google.android.libraries.maps:maps:3.1.0-beta'
+
+//ButterKnife Dependency
+    implementation 'com.jakewharton:butterknife:10.2.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.0'
+
+//ssp
+    implementation 'com.intuit.ssp:ssp-android:1.0.6'
+//sdp
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+
+    //Circle Image View
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+
+    //alum upload gallery
+    implementation 'com.yanzhenjie:album:2.1.3'
+    //glide
+    implementation 'com.github.bumptech.glide:glide:4.10.0'
+
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+    implementation 'com.google.firebase:firebase-messaging:17.3.4'
+
+}

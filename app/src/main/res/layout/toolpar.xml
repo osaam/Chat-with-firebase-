@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/toolpar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_60sdp"
+    android:background="@color/colorAccent"
+    android:titleTextColor="@color/white">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/toolpar_image"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:background="@drawable/ic_profile"
+
+        />
+
+    <TextView
+        android:id="@+id/toolpar_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:textSize="@dimen/_20sdp" />
+
+</Toolbar>
